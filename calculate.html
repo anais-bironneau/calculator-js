@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Calculatrice JS </title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" async></script>
+    </head>
+ 
+    <body>
+        <div class="main">
+            <div class="calcBox">
+                <input readonly id="value" style="text-align:right;" value="0" />
+                <ul>
+                    <li>
+                        <button class="nbr" onclick="v(1)">1</button>
+                        <button class="nbr" onclick="v(2)">2</button>
+                        <button class="nbr" onclick="v(3)">3</button>
+                        <button class="sign" onclick="calculus(1)">+</button>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li>
+                        <button class="nbr" onclick="v(4)">4</button>
+                        <button class="nbr" onclick="v(5)">5</button>
+                        <button class="nbr" onclick="v(6)">6</button>
+                        <button class="sign" onclick="calculus(2)">-</button>
+                        <span class="clearfix"></span>
+                    </li>
+                        <button class="nbr" onclick="v(7)">7</button>
+                        <button class="nbr" onclick="v(8)">8</button>
+                        <button class="nbr" onclick="v(9)">9</button>
+                        <button class="sign" onclick="calculus(3)">x</button>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li>
+                        <button class="nbr" onclick="v(0)">0</button>
+                        <button class="nbr2" onclick="point()">.</button>
+                        <button class="sign" onclick="calculus(4)">/</button>
+                        <span class="clearfix"></span>
+                    </li>
+                    <li>
+                        <button class="nbr" onclick="negative()">+/-</button>
+                        <button class="nbr" onclick="reinitialize()">C</button>
+                        <button class="result" onclick="result()">=</button>
+                        <span class="clearfix"></span>
+                    </li>
+                </ul>
+                <ul id="history">
+                    <li>No history</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
