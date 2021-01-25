@@ -77,13 +77,29 @@ function point() {
 	output_history.innerHTML = `<li>${history}</li>`;
 	history.push(entry1);
  	displayHistory(history);
+
+ 	output.value = 0;
+ 	operande = 0;
+
  }
 
 // to print calculator history
 function displayHistory(history) {
 
-	output_history.innerHTML = `<li>${history}</li>`;
-	operande = '';
+	html = '';
+
+	if (Array.isArray(history) && history.length) 
+	{
+
+		for (let i = 0; i < history.length; i++) {
+
+			html += `<li> ${history[i]} </li>`
+		}
+
+		output_history.innerHTML = html;
+
+	}
+
 } 
 
 
